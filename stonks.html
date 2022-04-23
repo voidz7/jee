@@ -1,0 +1,664 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>JEEEEEE📚</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(232, 227, 227);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(232, 227, 227, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;	
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(232, 227, 227, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(232, 227, 227, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(232, 227, 227, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(232, 227, 227);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(232, 227, 227, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(232, 227, 227, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="568e926e-6821-4c38-aa19-8a1a2a9bd551" class="page sans"><header><img class="page-cover-image" src="JEE/LpnYOMn.jpeg" style="object-position:center 90.95%"/><h1 class="page-title">JEEEEEE</h1></header><div class="page-body"><h1 id="a90ea3bd-b655-4a64-b57d-4dc18f9c14c0" class="">🌌 Physics</h1><table id="75a602b2-5eea-4fd8-97c9-0489aecd8af6" class="simple-table"><tbody><tr id="61d4ffe8-2d37-41a7-894c-5f873a416d54"><td id="]HT&gt;">👍</td><td id="TLqP">Chapter</td><td id="GwLC">2019</td><td id="_hv@">2020</td><td id="dgCx">2021</td></tr><tr id="2ed355a4-8856-4300-ac15-93a6689ce088"><td id="]HT&gt;">1</td><td id="TLqP">Current Electricity</td><td id="GwLC">42</td><td id="_hv@">27</td><td id="dgCx">49</td></tr><tr id="e6040ce2-dd09-4d1e-a283-fec2bee7b053"><td id="]HT&gt;">2</td><td id="TLqP">Rotational Motion</td><td id="GwLC">31</td><td id="_hv@">24</td><td id="dgCx">39</td></tr><tr id="4acbe348-289e-4ff3-903f-806bd3f965d4"><td id="]HT&gt;">3</td><td id="TLqP">Electrostatics</td><td id="GwLC">27</td><td id="_hv@">18</td><td id="dgCx">32</td></tr><tr id="d52a05c5-d0e9-4a76-a1cb-78762cde59fb"><td id="]HT&gt;">4</td><td id="TLqP">Semiconductor</td><td id="GwLC">16</td><td id="_hv@">15</td><td id="dgCx">42</td></tr><tr id="d06f25c7-64c2-45ed-82b1-2dd4e306cc4f"><td id="]HT&gt;">5</td><td id="TLqP">Ray Optics</td><td id="GwLC">26</td><td id="_hv@">20</td><td id="dgCx">31</td></tr><tr id="747772b0-7a92-4a7d-9920-15cd5a822748"><td id="]HT&gt;">6</td><td id="TLqP">Oscillations</td><td id="GwLC">14</td><td id="_hv@">5</td><td id="dgCx">36</td></tr><tr id="8b7ed275-a186-469d-a6f2-4837464b98d5"><td id="]HT&gt;">7</td><td id="TLqP">Alternation Current </td><td id="GwLC">10</td><td id="_hv@">11</td><td id="dgCx">40</td></tr><tr id="95de8603-f946-489a-ac50-3fee4b6402d6"><td id="]HT&gt;">8</td><td id="TLqP">Gravitation</td><td id="GwLC">17</td><td id="_hv@">16</td><td id="dgCx">32</td></tr><tr id="ebe56482-a0ff-41d3-9504-3417a228482f"><td id="]HT&gt;">9</td><td id="TLqP">Magnetic Effects of Current </td><td id="GwLC">24</td><td id="_hv@">26</td><td id="dgCx">23</td></tr><tr id="b2248902-76d4-4dde-b3f4-4d3b07d96e10"><td id="]HT&gt;">10</td><td id="TLqP">Dual Nature of Matter</td><td id="GwLC">17</td><td id="_hv@">15</td><td id="dgCx">30</td></tr><tr id="2efcb339-fbff-4ae5-8f1f-8537e054130f"><td id="]HT&gt;">11</td><td id="TLqP">Thermodynamics</td><td id="GwLC">14</td><td id="_hv@">19</td><td id="dgCx">32</td></tr><tr id="e388c6a0-d9b7-42e4-b2b5-f410e37d18c7"><td id="]HT&gt;">12</td><td id="TLqP">Kinetic Theory of Gases</td><td id="GwLC">19</td><td id="_hv@">16</td><td id="dgCx">26</td></tr><tr id="afe2e72d-dad4-43b7-8f44-722315ce3e79"><td id="]HT&gt;">13</td><td id="TLqP">Mathematics in Physics</td><td id="GwLC">14</td><td id="_hv@">5</td><td id="dgCx">25</td></tr><tr id="557382d4-b5c8-4d9c-8917-27eb4dde80b0"><td id="]HT&gt;">14</td><td id="TLqP">Waves and Sound</td><td id="GwLC">19</td><td id="_hv@">13</td><td id="dgCx">19</td></tr><tr id="7e9dbc9f-43a3-4dd6-94d5-8fc7c2012524"><td id="]HT&gt;">15</td><td id="TLqP">Laws of Motion</td><td id="GwLC">10</td><td id="_hv@">8</td><td id="dgCx">28</td></tr><tr id="3922b400-2ca8-4a1c-be70-b0dc64bc12e2"><td id="]HT&gt;">16</td><td id="TLqP">Electromagnetic Waves</td><td id="GwLC">15</td><td id="_hv@">13</td><td id="dgCx">22</td></tr><tr id="2690421c-3b5c-4c1b-9c4b-b45155014eec"><td id="]HT&gt;">17</td><td id="TLqP">Communication Systems</td><td id="GwLC">13</td><td id="_hv@">1</td><td id="dgCx">24</td></tr><tr id="d89f48ca-7682-46c2-927f-045608b421a8"><td id="]HT&gt;">18</td><td id="TLqP">Capacitance</td><td id="GwLC">15</td><td id="_hv@">13</td><td id="dgCx">20</td></tr><tr id="5c14400f-a63a-4172-82f6-75bfc9b0fe6f"><td id="]HT&gt;">19</td><td id="TLqP">Motion in Two Dimension</td><td id="GwLC">12</td><td id="_hv@">6</td><td id="dgCx">20</td></tr><tr id="5b0b6fc9-ba5e-4c2a-bf72-2f68b211432d"><td id="]HT&gt;">20</td><td id="TLqP">Motion in One Dimension</td><td id="GwLC">7</td><td id="_hv@">17</td><td id="dgCx">25</td></tr><tr id="2938fcc7-a43e-45d1-8c48-17c6a9f17428"><td id="]HT&gt;">21</td><td id="TLqP">Nuclear Physics</td><td id="GwLC">9</td><td id="_hv@">8</td><td id="dgCx">22</td></tr><tr id="5537e43c-3c6a-4a77-b17b-c68fcd5f23a2"><td id="]HT&gt;">22</td><td id="TLqP">Centre of Mass , Momentum and Collision</td><td id="GwLC">15</td><td id="_hv@">19</td><td id="dgCx">15</td></tr><tr id="f437f34f-b920-476c-8750-de9189141abf"><td id="]HT&gt;">23</td><td id="TLqP">Wave Optics </td><td id="GwLC">12</td><td id="_hv@">14</td><td id="dgCx">16</td></tr><tr id="c1c30401-b8cb-4da0-b352-481c49231f79"><td id="]HT&gt;">24</td><td id="TLqP">Thermal Properties of Matter</td><td id="GwLC">13</td><td id="_hv@">10</td><td id="dgCx">15</td></tr><tr id="7bb7e341-043e-48f3-93cb-41526805a8c6"><td id="]HT&gt;">25</td><td id="TLqP">Work Power Energy</td><td id="GwLC">7</td><td id="_hv@">8</td><td id="dgCx">20</td></tr><tr id="226000db-2d71-492e-9b6f-aa2f1d533209"><td id="]HT&gt;">26</td><td id="TLqP">Atomic Physics</td><td id="GwLC">10</td><td id="_hv@">6</td><td id="dgCx">17</td></tr><tr id="851fec62-3eb5-4aca-8d2b-9b3292b482bd"><td id="]HT&gt;">27</td><td id="TLqP">Units and Dimensions</td><td id="GwLC">9</td><td id="_hv@">9</td><td id="dgCx">17</td></tr><tr id="67b3e6a3-a39f-40af-9e7e-f2f4e5d869c3"><td id="]HT&gt;">28</td><td id="TLqP">Mechanical Properties of Fluids</td><td id="GwLC">12</td><td id="_hv@">14</td><td id="dgCx">14</td></tr><tr id="e58f9c04-0ad6-4904-9ba1-b1f905aa54c8"><td id="]HT&gt;">29</td><td id="TLqP">Electromagnetic Induction</td><td id="GwLC">10</td><td id="_hv@">10</td><td id="dgCx">14</td></tr><tr id="34ba29cc-7483-41c2-a5ef-a4227aca368a"><td id="]HT&gt;">30 </td><td id="TLqP">Mechanical Properties of Solids</td><td id="GwLC">6</td><td id="_hv@">5</td><td id="dgCx">16</td></tr><tr id="b94f7f7e-1b3a-43ba-ad73-b2590a373772"><td id="]HT&gt;">31</td><td id="TLqP">Magnetic Properties of Matter</td><td id="GwLC">6</td><td id="_hv@">4</td><td id="dgCx">12</td></tr><tr id="516d8836-f16b-4066-9c73-394f64e2c56e"><td id="]HT&gt;">32</td><td id="TLqP">Experimental Physics</td><td id="GwLC">9</td><td id="_hv@">5</td><td id="dgCx">7</td></tr></tbody></table><h1 id="39f65872-2faf-4899-862f-dfc87ee64567" class="">⚗️ Chemistry</h1><table id="54cab773-c54a-4e74-8ec3-5418a535d2ca" class="simple-table"><tbody><tr id="96f1fddd-e116-42f1-afaf-7bb451091997"><td id="QwjC">1</td><td id="xdtD">General Organic Chemistry</td><td id="ejdY">23</td><td id="Ql_@">27</td><td id="frMu">53</td></tr><tr id="346ed6d7-7e7c-4412-8277-4b389d1af0fd"><td id="QwjC">2</td><td id="xdtD">Coordination Compounds</td><td id="ejdY">30</td><td id="Ql_@">31</td><td id="frMu">43</td></tr><tr id="31d1799c-9332-4e69-a902-4e8b82bf4bbd"><td id="QwjC">3</td><td id="xdtD">Hydrocarbons</td><td id="ejdY">21</td><td id="Ql_@">21</td><td id="frMu">38</td></tr><tr id="50e64ebd-7c3d-432c-8127-31a774e4b1e1"><td id="QwjC">4</td><td id="xdtD">Amines</td><td id="ejdY">19</td><td id="Ql_@">14</td><td id="frMu">40</td></tr><tr id="8f5f3d38-154d-462c-a91b-99f6c1812b00"><td id="QwjC">5</td><td id="xdtD">Thermodynamics</td><td id="ejdY">23</td><td id="Ql_@">15</td><td id="frMu">27</td></tr><tr id="4e0fe2d7-567d-4cd9-947c-267730c8e5e5"><td id="QwjC">6</td><td id="xdtD">Solutions</td><td id="ejdY">19</td><td id="Ql_@">13</td><td id="frMu">29</td></tr><tr id="65cbe75c-8c01-43ab-bb34-1ee362258e49"><td id="QwjC">7</td><td id="xdtD">Environmental Chemistry</td><td id="ejdY">23</td><td id="Ql_@">8</td><td id="frMu">25</td></tr><tr id="b4fecad4-b0cf-47a6-9a8d-a7364a115c0d"><td id="QwjC">8</td><td id="xdtD">Biomolecules </td><td id="ejdY">18</td><td id="Ql_@">14</td><td id="frMu">29</td></tr><tr id="e36c5690-5e83-4ca7-a7a3-80c70a1bb6f9"><td id="QwjC">9</td><td id="xdtD">Structure of Atom</td><td id="ejdY">18</td><td id="Ql_@">13</td><td id="frMu">28</td></tr><tr id="542f9008-fcf5-4f39-822f-f9a782233ecd"><td id="QwjC">10</td><td id="xdtD">General Principles and Processes of Isolation of Metals</td><td id="ejdY">17</td><td id="Ql_@">9</td><td id="frMu">27</td></tr><tr id="a99b7386-6123-497d-8338-ca8702b81d06"><td id="QwjC">11</td><td id="xdtD">Chemical Kinetics </td><td id="ejdY">17</td><td id="Ql_@">17</td><td id="frMu">26</td></tr><tr id="b121249b-49a4-465d-ba2e-312b74c69cbd"><td id="QwjC">12</td><td id="xdtD">Aldehydes and Ketones</td><td id="ejdY">18</td><td id="Ql_@">12</td><td id="frMu">25</td></tr><tr id="b2124cb0-3722-42a5-b2f0-3c5e86424746"><td id="QwjC">13</td><td id="xdtD">Chemical Bonding </td><td id="ejdY">10</td><td id="Ql_@">20</td><td id="frMu">26</td></tr><tr id="325c286c-be95-40b1-94ec-6e90e71d2b7b"><td id="QwjC">14</td><td id="xdtD">D and F block</td><td id="ejdY">13</td><td id="Ql_@">11</td><td id="frMu">25</td></tr><tr id="2007d1b8-a123-4d6e-a385-0e1847ebafe7"><td id="QwjC">15</td><td id="xdtD">Alcohol , Phenol and Ethers</td><td id="ejdY">15</td><td id="Ql_@">8</td><td id="frMu">23</td></tr><tr id="14a8a9ef-cfb1-4fa5-b864-17a3b9552d88"><td id="QwjC">16</td><td id="xdtD">Some Basic Concepts of Chemistry </td><td id="ejdY">12</td><td id="Ql_@">13</td><td id="frMu">23</td></tr><tr id="c05a1d61-a218-4542-b36d-680ccb1a8fd5"><td id="QwjC">17</td><td id="xdtD">P block Elements (group 15,16,17 and 18)</td><td id="ejdY">13</td><td id="Ql_@">14</td><td id="frMu">24</td></tr><tr id="34721428-b177-4b60-8e90-987f28342f29"><td id="QwjC">18</td><td id="xdtD">Surface Chemistry </td><td id="ejdY">15</td><td id="Ql_@">11</td><td id="frMu">21</td></tr><tr id="11292971-a36e-4ee1-ae0b-b9c56a0447db"><td id="QwjC">19</td><td id="xdtD">S Block Elements</td><td id="ejdY">14</td><td id="Ql_@">10</td><td id="frMu">18</td></tr><tr id="1fe91e06-ee0d-49ed-b97e-32a2bb7dcb46"><td id="QwjC">20</td><td id="xdtD">Hydrogen </td><td id="ejdY">13</td><td id="Ql_@">10</td><td id="frMu">14</td></tr><tr id="0523757a-7b98-4aea-b403-531b6c154494"><td id="QwjC">21</td><td id="xdtD">Electrochemistry </td><td id="ejdY">14</td><td id="Ql_@">16</td><td id="frMu">17</td></tr><tr id="a0af4c05-c57e-41df-aa75-34f3656fd17c"><td id="QwjC">22</td><td id="xdtD">Periodic Table</td><td id="ejdY">14</td><td id="Ql_@">17</td><td id="frMu">21</td></tr><tr id="b1933df7-2ce7-4e07-92fa-a608c0848a06"><td id="QwjC">23</td><td id="xdtD">Haloalkanes and Haloarenes</td><td id="ejdY">15</td><td id="Ql_@">12</td><td id="frMu">17</td></tr><tr id="33fc9bbd-b498-491c-8419-01edfa84264b"><td id="QwjC">24</td><td id="xdtD">Solid State</td><td id="ejdY">10</td><td id="Ql_@">5</td><td id="frMu">14</td></tr><tr id="fc3245f7-d9ee-43dc-b04c-aaf0b4622c3a"><td id="QwjC">25</td><td id="xdtD">Redox Reactions </td><td id="ejdY">6</td><td id="Ql_@">10</td><td id="frMu">12</td></tr><tr id="0a279168-a81d-48dc-9f4d-822d48b76f98"><td id="QwjC">26</td><td id="xdtD">Ionic Equilibrium </td><td id="ejdY">10</td><td id="Ql_@">10</td><td id="frMu">17</td></tr><tr id="c169eee0-2fcb-4ff1-93c2-a9d9059d173b"><td id="QwjC">27</td><td id="xdtD">Polymers</td><td id="ejdY">12</td><td id="Ql_@">5</td><td id="frMu">14</td></tr><tr id="0ce06205-f168-42d2-a851-9a144860b145"><td id="QwjC">28</td><td id="xdtD">Carboxylic Acid Derivatives </td><td id="ejdY">13</td><td id="Ql_@">4</td><td id="frMu">12</td></tr><tr id="024c58b0-53b6-4c89-a452-78d313ee8b8d"><td id="QwjC">29</td><td id="xdtD">Chemical Equilibrium </td><td id="ejdY">8</td><td id="Ql_@">8</td><td id="frMu">15</td></tr><tr id="0a25dfd7-5549-471d-87fd-17131fd63313"><td id="QwjC">30</td><td id="xdtD">P block Elements  (group 13 and 14)</td><td id="ejdY">12</td><td id="Ql_@">4</td><td id="frMu">8</td></tr><tr id="8576c5c5-8097-4aea-ac42-c4cfb7aa1525"><td id="QwjC">31</td><td id="xdtD">State of Matter</td><td id="ejdY">8</td><td id="Ql_@">6</td><td id="frMu">11</td></tr><tr id="aa32262f-c7dd-4e3b-bf65-2efecfc199fb"><td id="QwjC">32</td><td id="xdtD">Chemistry in Everyday Life</td><td id="ejdY">6</td><td id="Ql_@">12</td><td id="frMu">13</td></tr><tr id="1fb68616-80fb-404d-b6f8-8da4cef66b27"><td id="QwjC">33</td><td id="xdtD">Practical Chemistry </td><td id="ejdY">1</td><td id="Ql_@">0</td><td id="frMu">3</td></tr></tbody></table><h1 id="ea63d0ec-5b2b-4525-bac6-a077e36f2e63" class="">📏 Mathz</h1><table id="a563da1b-daea-4398-a3d3-2998785005f5" class="simple-table"><tbody><tr id="5cc1e187-a56c-44b9-b0d4-cfca34b6767d"><td id="Wy;p">1</td><td id="&lt;nrg">3D geometry </td><td id="jouG">31</td><td id="ER{L">19</td><td id="Q`a&gt;">56</td></tr><tr id="03aef26a-ef75-459a-b824-f80cf2314a32"><td id="Wy;p">2</td><td id="&lt;nrg">Definite Integration </td><td id="jouG">23</td><td id="ER{L">15</td><td id="Q`a&gt;">48</td></tr><tr id="4ba753ad-b3fa-4a7e-bbfb-cb857b8b1d89"><td id="Wy;p">3</td><td id="&lt;nrg">Sequence and Series</td><td id="jouG">26</td><td id="ER{L">28</td><td id="Q`a&gt;">38</td></tr><tr id="2da3afb5-73e5-4dbf-acbe-237533ede0ba"><td id="Wy;p">4</td><td id="&lt;nrg">Binomial Theorem</td><td id="jouG">21</td><td id="ER{L">19</td><td id="Q`a&gt;">38</td></tr><tr id="56b718ef-4e93-47d3-ad86-9c8a21f625a7"><td id="Wy;p">5</td><td id="&lt;nrg">Differential Equations</td><td id="jouG">15</td><td id="ER{L">16</td><td id="Q`a&gt;">43</td></tr><tr id="fdc645ac-2fdc-4478-9117-e9a6938fb59b"><td id="Wy;p">6</td><td id="&lt;nrg">Application of Derivatives </td><td id="jouG">22</td><td id="ER{L">31</td><td id="Q`a&gt;">36</td></tr><tr id="3f9134c1-8925-4139-b841-a02d10ac0552"><td id="Wy;p">7</td><td id="&lt;nrg">Vector Algebra</td><td id="jouG">16</td><td id="ER{L">13</td><td id="Q`a&gt;">35</td></tr><tr id="d13c8c32-7664-4037-9d92-e808849e13af"><td id="Wy;p">8</td><td id="&lt;nrg">Probability </td><td id="jouG">19</td><td id="ER{L">17</td><td id="Q`a&gt;">32</td></tr><tr id="f4add582-ff0f-40c0-aeb5-0d19d7ee3e42"><td id="Wy;p">9</td><td id="&lt;nrg">Determinants </td><td id="jouG">22</td><td id="ER{L">21</td><td id="Q`a&gt;">29</td></tr><tr id="c3efce3b-39fb-426e-8703-35cc24c4ee46"><td id="Wy;p">10</td><td id="&lt;nrg">Circle</td><td id="jouG">21</td><td id="ER{L">8</td><td id="Q`a&gt;">29</td></tr><tr id="751a7179-975a-4a11-a801-22665a5d729d"><td id="Wy;p">11</td><td id="&lt;nrg">Functions </td><td id="jouG">15</td><td id="ER{L">11</td><td id="Q`a&gt;">32</td></tr><tr id="d81a9c58-41e0-4c58-8ef0-7265392f68af"><td id="Wy;p">12</td><td id="&lt;nrg">Complex Number</td><td id="jouG">14</td><td id="ER{L">17</td><td id="Q`a&gt;">30</td></tr><tr id="b0d74e39-2898-43ee-95be-140e75f55764"><td id="Wy;p">13</td><td id="&lt;nrg">Quadratic Equations</td><td id="jouG">20</td><td id="ER{L">16</td><td id="Q`a&gt;">23</td></tr><tr id="ab33ccea-bde5-42f9-b396-21333a4cccae"><td id="Wy;p">14</td><td id="&lt;nrg">Matrices</td><td id="jouG">9</td><td id="ER{L">10</td><td id="Q`a&gt;">33</td></tr><tr id="4261f168-944d-44a4-9bda-553c389efbb2"><td id="Wy;p">15</td><td id="&lt;nrg">Mathematical Reasoning</td><td id="jouG">16</td><td id="ER{L">16</td><td id="Q`a&gt;">25</td></tr><tr id="53d9b761-aba7-4bed-80fe-6219a91032c8"><td id="Wy;p">16</td><td id="&lt;nrg">Permutations Combinations</td><td id="jouG">14</td><td id="ER{L">13</td><td id="Q`a&gt;">26</td></tr><tr id="226b0ce1-9e4b-44e8-a295-f046466dd11f"><td id="Wy;p">17</td><td id="&lt;nrg"> Straight Lines </td><td id="jouG">20</td><td id="ER{L">12</td><td id="Q`a&gt;">19</td></tr><tr id="9873d72f-6401-4748-b9d4-93c74e926b3a"><td id="Wy;p">18</td><td id="&lt;nrg"> Limits</td><td id="jouG">12</td><td id="ER{L">13</td><td id="Q`a&gt;">24</td></tr><tr id="f3fd02ec-82d6-4129-8a06-4a9602faf349"><td id="Wy;p">19</td><td id="&lt;nrg">Continuity and Differentiability </td><td id="jouG">13</td><td id="ER{L">9</td><td id="Q`a&gt;">23</td></tr><tr id="2bc713fd-3a78-4472-ab88-0054f5fbde3b"><td id="Wy;p">20</td><td id="&lt;nrg">Statistics </td><td id="jouG">14</td><td id="ER{L">15</td><td id="Q`a&gt;">21</td></tr><tr id="f54abd3c-9cde-4b09-99e1-be8f89fc4dc4"><td id="Wy;p">21</td><td id="&lt;nrg">Area Under Curve</td><td id="jouG">14</td><td id="ER{L">11</td><td id="Q`a&gt;">17</td></tr><tr id="ffc31dfa-0339-42b0-9c19-0cfc763f0846"><td id="Wy;p">22</td><td id="&lt;nrg">Parabola</td><td id="jouG">15</td><td id="ER{L">11</td><td id="Q`a&gt;">14</td></tr><tr id="87f105f1-ddfe-4cd5-a925-12ff660f2e24"><td id="Wy;p">23</td><td id="&lt;nrg">Inverse Trigonometric Functions </td><td id="jouG">8</td><td id="ER{L">4</td><td id="Q`a&gt;">19</td></tr><tr id="3d68a623-3079-488b-8d48-a83c53aa9f52"><td id="Wy;p">24</td><td id="&lt;nrg">Indefinite Integrations </td><td id="jouG">15</td><td id="ER{L">8</td><td id="Q`a&gt;">11</td></tr><tr id="fe2f8c64-3313-4754-9b4c-c7d77fab8057"><td id="Wy;p">25</td><td id="&lt;nrg">Ellipse</td><td id="jouG">9</td><td id="ER{L">11</td><td id="Q`a&gt;">15</td></tr><tr id="685e8a7e-71b6-4fd2-bac1-f93951e8f7c1"><td id="Wy;p">26</td><td id="&lt;nrg">Hyperbola</td><td id="jouG">11</td><td id="ER{L">7</td><td id="Q`a&gt;">10</td></tr><tr id="3286fbb1-a774-483c-bb48-509443055f79"><td id="Wy;p">27</td><td id="&lt;nrg">Trigonometric Equations </td><td id="jouG">8</td><td id="ER{L">4</td><td id="Q`a&gt;">11</td></tr><tr id="daad88d9-9484-4be5-8bd0-4328fb924556"><td id="Wy;p">28</td><td id="&lt;nrg">Sets and Relations </td><td id="jouG">8</td><td id="ER{L">8</td><td id="Q`a&gt;">10</td></tr><tr id="df76fb38-4935-4529-a19a-539bd107e67d"><td id="Wy;p">29</td><td id="&lt;nrg">Heights and Distances</td><td id="jouG">7</td><td id="ER{L">4</td><td id="Q`a&gt;">8</td></tr><tr id="1be3a2bb-1ae1-4265-a42f-ef4f8bea1f84"><td id="Wy;p">30</td><td id="&lt;nrg">Trigonometric Rations and Identities </td><td id="jouG">7</td><td id="ER{L">4</td><td id="Q`a&gt;">7</td></tr><tr id="69bbc60f-68b2-4acf-9f77-70f11165faef"><td id="Wy;p">31</td><td id="&lt;nrg">Differentiation</td><td id="jouG">9</td><td id="ER{L">9</td><td id="Q`a&gt;">5</td></tr><tr id="d67f9855-9ff5-421c-a825-6da99f10e629"><td id="Wy;p">32</td><td id="&lt;nrg">Properties of Triangles </td><td id="jouG">5</td><td id="ER{L">0</td><td id="Q`a&gt;">5</td></tr><tr id="c9461cc1-328e-48d7-96f6-92c2d55cec33"><td id="Wy;p">33</td><td id="&lt;nrg">Basic of Mathematics</td><td id="jouG">1</td><td id="ER{L">0</td><td id="Q`a&gt;">4</td></tr><tr id="c7ab0a21-4902-4456-a192-b3f8d52667fa"><td id="Wy;p">34</td><td id="&lt;nrg">Pair of Lines</td><td id="jouG">0</td><td id="ER{L">0</td><td id="Q`a&gt;">2</td></tr><tr id="10cc398e-6c6c-4e98-a6cc-dde2dbb792d3"><td id="Wy;p">35</td><td id="&lt;nrg">Mathematical Induction</td><td id="jouG">0</td><td id="ER{L">0</td><td id="Q`a&gt;">1</td></tr><tr id="6e62a4b2-80ae-42ea-9ad8-b0e0e4273ad1"><td id="Wy;p">36</td><td id="&lt;nrg">Linear Programming </td><td id="jouG">0</td><td id="ER{L">0</td><td id="Q`a&gt;">1</td></tr></tbody></table></div></article></body></html>
+
+
+<head>
+<a href="JEE/JEE.pdf">Downlaod pdf</a>
+<link rel="stylesheet" href="styles.css">
+</head>
+
